@@ -1,0 +1,24 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "User", ()=>User
+);
+class User {
+    constructor(data){
+        this.data = data;
+        this.events = {
+        };
+    }
+    get(propName) {
+        return this.data[propName];
+    }
+    set(update) {
+        Object.assign(this.data, update);
+    }
+    on(eventName, callback) {
+        const handlers = this.events[eventName] || [];
+        handlers.push(callback);
+        this.events[eventName] = handlers;
+    }
+    trigger(eventName) {
+    }
+}

@@ -1,0 +1,7 @@
+import   "fe6805ae6a1acc57369ff96015183e28:./models/User";
+const $fe6805ae6a1acc57369ff96015183e28$var$user = new $fe6805ae6a1acc57369ff96015183e28$import$9bcaa281825ccff$6dfd36110bdb6d4f({
+    name: 'myname',
+    age: 20
+});
+console.log($fe6805ae6a1acc57369ff96015183e28$var$user.get('name'));
+console.log($fe6805ae6a1acc57369ff96015183e28$var$user.get('age'));

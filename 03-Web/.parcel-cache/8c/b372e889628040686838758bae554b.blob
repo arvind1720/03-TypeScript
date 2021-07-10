@@ -1,0 +1,8 @@
+class $244a8b77e4e5151acceb65cfbc25bc7d$export$6dfd36110bdb6d4f {
+    constructor(data){
+        this.data = data;
+    }
+    get(propName) {
+        return this.data[propName];
+    }
+}

@@ -1,0 +1,6 @@
+var _user = require("./models/User");
+const user = new _user.User({
+});
+user.on('change', ()=>{
+});
+console.log(user);

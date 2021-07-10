@@ -1,0 +1,7 @@
+var _user = require("./models/User");
+const user = new _user.User({
+    id: 1
+});
+user.set({
+    name: 'ArvindU'
+});

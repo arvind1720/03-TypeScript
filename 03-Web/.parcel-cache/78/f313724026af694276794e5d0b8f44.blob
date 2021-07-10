@@ -1,0 +1,14 @@
+(function() {
+    const e2 = new class {
+        constructor(e1){
+            this.data = e1;
+        }
+        get(e) {
+            return this.data[e];
+        }
+    }({
+        name: "myname",
+        age: 20
+    });
+    console.log(e2.get("name")), console.log(e2.get("age"));
+})();
