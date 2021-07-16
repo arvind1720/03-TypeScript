@@ -1,0 +1,19 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "ApiSync", ()=>ApiSync
+);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+class ApiSync {
+    constructor(rootUrl){
+        this.rootUrl = rootUrl;
+    }
+    fetch(id) {
+        return _axiosDefault.default.get(`${this.rootUrl}/${id}`);
+    }
+    save(data) {
+        const { id  } = data;
+        if (id) _axiosDefault.default.put(`${this.rootUrl}/${id}`, data);
+        else _axiosDefault.default.post(this.rootUrl, this.data);
+    }
+}

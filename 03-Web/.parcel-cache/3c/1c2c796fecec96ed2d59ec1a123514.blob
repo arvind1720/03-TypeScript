@@ -1,8 +1,0 @@
-var _user = require("./models/User");
-const user = new _user.User({
-});
-user.set({
-    age: 9999
-});
-console.log(user.get('name'));
-console.log(user.get('age'));

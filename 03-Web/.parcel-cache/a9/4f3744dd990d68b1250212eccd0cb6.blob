@@ -1,0 +1,20 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "CollectionView", ()=>CollectionView
+);
+class CollectionView {
+    constructor(parent, collection){
+        this.parent = parent;
+        this.collection = collection;
+    }
+    render() {
+        this.parent.innerHTML = '';
+        const templateElement = document.createElement('template');
+        for (let model of this.collection.models){
+            const itemParent = document.createElement('div');
+            this.renderItem(model, itemParent);
+            templateElement.content.append(itemParent);
+        }
+        this.parent.append(templateElement.content);
+    }
+}

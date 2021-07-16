@@ -1,7 +1,0 @@
-import   "91ce0db7e4c9651895ac2f5fe2529f84:./models/User";
-const $91ce0db7e4c9651895ac2f5fe2529f84$var$user = new $91ce0db7e4c9651895ac2f5fe2529f84$import$9bcaa281825ccff$6dfd36110bdb6d4f({
-    name: 'myname',
-    age: 20
-});
-console.log($91ce0db7e4c9651895ac2f5fe2529f84$var$user.get('name'));
-console.log($91ce0db7e4c9651895ac2f5fe2529f84$var$user.get('age'));

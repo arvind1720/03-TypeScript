@@ -1,0 +1,18 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Attributes", ()=>Attributes
+);
+class Attributes {
+    constructor(data){
+        this.data = data;
+        this.get = (key)=>{
+            return this.data[key];
+        };
+    }
+    set(update) {
+        Object.assign(this.data, update);
+    }
+    getAll() {
+        return this.data;
+    }
+}

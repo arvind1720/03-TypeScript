@@ -1,0 +1,10 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "UserShow", ()=>UserShow
+);
+var _view = require("./View");
+class UserShow extends _view.View {
+    template() {
+        return `\n        <div>\n        <h1>User Detail</h1>\n        <div>User Name:${this.model.get('name')}</div>\n        <div>User Age: ${this.model.get('age')}</div>\n        </div>\n        `;
+    }
+}

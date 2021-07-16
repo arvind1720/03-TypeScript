@@ -1,8 +1,0 @@
-class $66aad8fc7900501808e876a31e035ca2$export$6dfd36110bdb6d4f {
-    constructor(data){
-        this.data = data;
-    }
-    get(propName) {
-        return this.data[propName];
-    }
-}

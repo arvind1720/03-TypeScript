@@ -1,9 +1,0 @@
-var _user = require("./models/User");
-const user = new _user.User({
-    name: 'Arvind2',
-    age: 21
-});
-user.events.on('change', ()=>{
-    console.log('change');
-});
-user.events.trigger('change');

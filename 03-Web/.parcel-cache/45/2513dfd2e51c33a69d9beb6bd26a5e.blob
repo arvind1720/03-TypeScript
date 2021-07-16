@@ -1,0 +1,10 @@
+var _userList = require("./views/UserList");
+var _collection = require("./models/Collection");
+const users = new _collection.Collection('http://localhost:30000/users', (json)=>{
+    return User.buildUser(json);
+});
+users.on('change', ()=>{
+    const root;
+    if (root) new _userList.UserList(root, users).render();
+});
+users.fetch();

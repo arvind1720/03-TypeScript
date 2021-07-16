@@ -1,0 +1,11 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "UserList", ()=>UserList
+);
+var _collectionView = require("./CollectionView");
+var _userShow = require("./UserShow");
+class UserList extends _collectionView.CollectionView {
+    renderItem(model, itemParent) {
+        new _userShow.UserShow(itemParent, model).render();
+    }
+}

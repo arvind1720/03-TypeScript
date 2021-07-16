@@ -1,0 +1,6 @@
+var _collection = require("./models/Collection");
+const users = new _collection.Collection('http://localhost:30000/users', (json)=>{
+    return User.buildUser(json);
+});
+users.on('change', ()=>{
+});

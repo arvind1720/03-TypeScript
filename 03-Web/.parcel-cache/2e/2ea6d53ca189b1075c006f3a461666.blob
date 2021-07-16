@@ -1,0 +1,29 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Collection", ()=>Collection
+);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _eventing = require("./Eventing");
+class Collection {
+    constructor(rootUrl, deserialize){
+        this.rootUrl = rootUrl;
+        this.deserialize = deserialize;
+        this.models = [];
+        this.events = new _eventing.Eventing();
+    }
+    get on() {
+        return this.events.on;
+    }
+    get trigger() {
+        return this.events.trigger;
+    }
+    fetch() {
+        _axiosDefault.default.get(this.rootUrl).then((response)=>{
+            response.data.forEach((value)=>{
+                this.models.push(this.deserialize(value));
+            });
+            this.trigger('change');
+        });
+    }
+}
